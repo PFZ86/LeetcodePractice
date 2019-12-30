@@ -1,0 +1,8 @@
+'''
+S (size N) contains items to shuffle
+'''
+KnuthShuffle(S):
+    for i in 0 to (N-1):
+        rdn = random from 0 to i
+        nums[i], nums[rdn] = nums[rdn], nums[i]
+        

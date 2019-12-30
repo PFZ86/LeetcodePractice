@@ -1,0 +1,17 @@
+'''
+S (size N) contains items to sample from.
+R (size K) contains the samples.
+'''
+ReservoirSampling(S, R):
+    for i in 0 to (K-1):
+        # fill the reservoir
+        R[i] = S[i]
+    for i in K to (N-1):
+        # replace item in the reservoir with gradually decreasing probability
+        rdn = random from 0 ot i
+        if rdn <= (K-1):
+            R[rdn] = S[i]
+            
+'''
+The 'select-and-keep' algorithm is the special case of reservoir sampling with K=1.
+'''
