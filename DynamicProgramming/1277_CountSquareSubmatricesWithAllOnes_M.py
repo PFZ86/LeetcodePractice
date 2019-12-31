@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/count-square-submatrices-with-all-ones/
 
 # Solution 1: dp
+# Also see https://leetcode.com/problems/maximal-square/
 class Solution(object):
     def countSquares(self, matrix):
         """
@@ -30,3 +31,4 @@ class Solution(object):
                     dp[i][j] = 0
 
         return sum(map(sum, dp))
+        
