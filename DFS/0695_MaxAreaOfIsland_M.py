@@ -8,7 +8,7 @@ class Solution(object):
         :rtype: int
         """
         def dfs(i, j, area):
-            if i < 0 or i == nrow or j < 0 or j == ncol:
+            if i < 0 or i > (nrow-1) or j < 0 or j > (ncol-1):
                 return area
             if visited[i][j]:
                 return area
@@ -41,4 +41,3 @@ class Solution(object):
                     max_area = max(max_area, area)
 
         return max_area
-        
