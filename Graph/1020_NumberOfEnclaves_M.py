@@ -1,14 +1,6 @@
 # https://leetcode.com/problems/number-of-enclaves/
 
 # Solution 1: dfs
-'''
-[[3,10],[4,10],[5,11]]
-
-interval last_interval num_removals
-[3, 10]  [3, 10]       0
-[4, 10]  [3, 10]       1
-[5, 11]  [5, 11]       1
-'''
 class Solution(object):
     def numEnclaves(self, A):
         """
@@ -57,4 +49,3 @@ class Solution(object):
                         res += area
 
         return res
-        
