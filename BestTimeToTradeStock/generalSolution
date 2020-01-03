@@ -4,11 +4,15 @@ T(i, k, 0): the maximum profit at the end of the i-th day with at most k transac
 T(i, k, 1): the maximum profit at the end of the i-th day with at most k transactions and with 1 stock in our hand AFTER taking the action. 
 
 A trasaction is a pair of (buy, sell).
+Only a 'buy' changes the maximum allowed transactions.
 
 Base case:
 T(-1, k, 0) = T(i, 0, 0) = 0
 T(-1, k, 1) = T(i, 0, 1) = -infty
 
 Recursion:
-T(i, k, 0) = max{T(i-1, k, 0), T(i-1, k, 1) + p[i]}   # note that the maximum number of allowable transactions remains the same.
-T(i, k, 1) = max{T(i-1, k, 1), T(i-1, k-1, 0) - p[i]} # note that the maximum number of allowable transactions changes by 1.
+T(i, k, 0) = max{T(i-1, k, 0), T(i-1, k, 1) + p[i]}
+# Note that the maximum number of allowable transactions remains the same.
+
+T(i, k, 1) = max{T(i-1, k, 1), T(i-1, k-1, 0) - p[i]}
+# Note that the maximum number of allowable transactions changes by 1.
