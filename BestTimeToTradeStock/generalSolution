@@ -1,10 +1,13 @@
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/most-consistent-ways-of-dealing-with-the-series-of-stock-problems
 
-T(i, k, 0): the maximum profit at the end of the i-th day with at most k transactions and with 0 stock in our hand AFTER taking the action,
-T(i, k, 1): the maximum profit at the end of the i-th day with at most k transactions and with 1 stock in our hand AFTER taking the action. 
+T(i, k, 0): The maximum profit at the end of the i-th day
+            with at most k transactions and with 0 stock in our hand AFTER taking the action.
+
+T(i, k, 1): The maximum profit at the end of the i-th day
+            with at most k transactions and with 1 stock in our hand AFTER taking the action. 
 
 A trasaction is a pair of (buy, sell).
-Only a 'buy' changes the maximum allowed transactions.
+Only the action 'buy' changes the maximum allowed transactions.
 
 Base case:
 T(-1, k, 0) = T(i, 0, 0) = 0
@@ -16,3 +19,5 @@ T(i, k, 0) = max{T(i-1, k, 0), T(i-1, k, 1) + p[i]}
 
 T(i, k, 1) = max{T(i-1, k, 1), T(i-1, k-1, 0) - p[i]}
 # Note that the maximum number of allowable transactions changes by 1.
+
+The maximum profit at the end of the last day is T(n-1, k, 0).
