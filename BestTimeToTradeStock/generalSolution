@@ -3,6 +3,8 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-f
 T(i, k, 0): the maximum profit at the end of the i-th day with at most k transactions and with 0 stock in our hand AFTER taking the action,
 T(i, k, 1): the maximum profit at the end of the i-th day with at most k transactions and with 1 stock in our hand AFTER taking the action. 
 
+A trasaction is a pair of (buy, sell).
+
 Base case:
 T(-1, k, 0) = T(i, 0, 0) = 0
 T(-1, k, 1) = T(i, 0, 1) = -infty
