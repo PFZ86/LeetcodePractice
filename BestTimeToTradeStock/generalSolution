@@ -21,3 +21,4 @@ T(i, k, 1) = max{T(i-1, k, 1), T(i-1, k-1, 0) - p[i]}
 # Note that the maximum number of allowable transactions changes by 1.
 
 The maximum profit at the end of the last day is T(n-1, k, 0).
+
