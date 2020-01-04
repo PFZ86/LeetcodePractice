@@ -26,3 +26,4 @@ class Solution(object):
             t_iinfty1 = max(t_iinfty1, t_iinfty0_old - price - fee)
 
         return t_iinfty0
+        
