@@ -65,3 +65,4 @@ class Solution(object):
                 board[i][j] = int((i,j) in lc)
 
         return
+        
