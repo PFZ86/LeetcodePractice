@@ -55,7 +55,13 @@ class Solution(object):
         return
 
 # Solution 2: O(mn) time, O(1) space
-# Similar problem: https://leetcode.com/problems/game-of-life/
+'''
+curr_ij -> (curr_ij, curr_ij)
+(curr_ij, curr_ij) -> (next_ij, curr_ij)
+(next_ij, curr_ij) -> next_ij
+
+Similar problem: https://leetcode.com/problems/game-of-life/
+'''
 class Solution(object):
     def setZeroes(self, matrix):
         """
@@ -84,3 +90,4 @@ class Solution(object):
                 matrix[i][j] = matrix[i][j][0]
 
         return
+        
