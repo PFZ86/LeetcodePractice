@@ -70,7 +70,8 @@ class Solution(object):
 
         l = len(nums1) + len(nums2)
 
-        if l%2 == 1:
-            return kth(nums1, nums2, l // 2)
-        else:
+        if l%2 == 0:
             return 0.5*(kth(nums1, nums2, l // 2) + kth(nums1, nums2, l // 2 - 1))
+        else:
+            return kth(nums1, nums2, l // 2)
+            
