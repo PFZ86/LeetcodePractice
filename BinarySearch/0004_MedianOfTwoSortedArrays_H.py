@@ -34,10 +34,10 @@ class Solution(object):
 
 # Solution 2: kth smallest number in two sorted arrays; O(log (m+n)) time;
 '''
+https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2511/Intuitive-Python-O(log-(m%2Bn))-solution-by-kth-smallest-in-the-two-sorted-arrays-252ms
 Find the kth smallest number by divide-and-conquer:
 (1) compare len(nums1)/2 + len(nums2)/2 with k to decide to discard upper halves or lower halves.
 (2) compare nums1[len(nums1)/2] with nums2[len(nums2)/2] to decide which upper/lower half to dicard.
-https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2511/Intuitive-Python-O(log-(m%2Bn))-solution-by-kth-smallest-in-the-two-sorted-arrays-252ms
 '''
 class Solution(object):
     def findMedianSortedArrays(self, nums1, nums2):
