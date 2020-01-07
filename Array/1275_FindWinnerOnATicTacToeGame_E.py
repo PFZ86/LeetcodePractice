@@ -92,9 +92,5 @@ class Solution(object):
                     return player
         
         # no winner after all moves
+        return 'Draw' if len(moves) == n**2 else 'Pending'
         
-        if len(moves) == n**2:
-            return 'Draw'
-        
-        return 'Pending'
-    
