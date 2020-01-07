@@ -10,9 +10,9 @@ def inorder_iterative(root):
             stack.append(visit)
             visit = visit.left
 
-        next = stack[-1]
+        node = stack[-1]
         del stack[-1]
-        visit = next.right
+        visit = node.right
 
-        doSomething(next.val)
+        doSomething(node.val)
         
