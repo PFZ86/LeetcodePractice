@@ -40,3 +40,4 @@ class Solution(object):
             ugly_nums.append(num)
 
         return ugly_nums[-1]
+        
