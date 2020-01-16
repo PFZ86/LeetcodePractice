@@ -22,4 +22,23 @@ class Solution(object):
             code_set.add(code)
 
         return len(code_set)
+
+# Solution 2
+class Solution(object):
+    def uniqueMorseRepresentations(self, words):
+        """
+        :type words: List[str]
+        :rtype: int
+        """
+
+        code_list = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+
+        code_set = set()
+        for word in words:
+            code = ''
+            for letter in word:
+                code += code_list[ord(letter) - ord('a')]
+            code_set.add(code)
+
+        return len(code_set)
         
