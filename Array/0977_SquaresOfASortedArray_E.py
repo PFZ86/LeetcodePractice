@@ -1,13 +1,10 @@
 # https://leetcode.com/problems/squares-of-a-sorted-array/
 
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 # Solution 1:
+'''
+(1) Find the index of the first non-negative number.
+(2) Use the 'two-pointer' method as in the merge step in merge sort.
+'''
 class Solution(object):
     def sortedSquares(self, A):
         """
